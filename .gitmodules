@@ -1,0 +1,6 @@
+[submodule "miniapp"]
+	path = miniapp
+	url = https://github.com/aprilweet/blog-miniapp.git
+[submodule "server"]
+	path = server
+	url = https://github.com/aprilweet/blog-server.git
