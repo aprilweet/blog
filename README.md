@@ -53,3 +53,21 @@ blog v2.0.0 采用微信小程序云开发架构，无需自建服务器。
 * 目前blog包含子模块miniapp和server，三者之间的版本号互相独立
 * 微信公众平台小程序发布版本号对应miniapp的tag
 * blog的tag是整个系统的版本
+
+# 发布文章
+文章信息存储在云数据库的mmArticle集合中，发布一篇文章，也即在其中添加一条记录，每条记录有以下字段，其中部分为可选（没有或者设置为null）：
+* abstract：string，可选。文章摘要，显示在文章列表页面，markdown文本
+* abstractInFile：boolean，可选。true表明abstract字段为markdown文本的云存储fileID，markdown文本会从对应云存储文件读取
+* author：string，可选。文章原作者，展示时会覆盖userID指定的作者
+* body：string，可选。文章正文，显示在文章页面，markdown文本
+* bodyInFile：boolean，可选。与abstractInFile相似
+* classification：string，可选。文章分类
+* createTime：date，必选。发布时间，影响显示顺序
+* deleted：boolean，必选。文章是否已经删除，删除后不会显示
+* sourceLink：string，可选。转载文章的链接
+* tags：array of string，可选。文章的标签列表
+* title：string，必选。文章标题
+* updateTime：date，可选。文章最近修改时间，目前不影响展示顺序
+* userID：string，可选。文章发布者ID，必须在mmUser中存在（也即使用过本小程序），如果author字段为空，则展示此user的昵称为文章作者
+* visible：boolean，必选。文章是否可见。false表明此文章只对管理员可见
+
