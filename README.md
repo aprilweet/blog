@@ -26,6 +26,9 @@ blog v2.0.0 采用微信小程序云开发架构，无需自建服务器。
         * 超时时间：20秒
         * 环境变量：account=*你的豆瓣域名*
         * 上传触发器：*EveryHour*，每小时整点运行
+      * mmSearchSubmit
+        * 超时时间：20秒
+        * 上传触发器：*EveryDay*，每天零点运行
 4. 测试发布小程序
    1. 修改src/config.js中的tcbEnv为云开发环境ID
    2. 在 *微信公众平台-小程序-开发-开发设置-服务器域名-downloadFile合法域名* 中设置*https://wx.qlogo.cn*
