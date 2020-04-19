@@ -4,3 +4,6 @@
 [submodule "server"]
 	path = server
 	url = https://github.com/aprilweet/blog-server.git
+[submodule "web"]
+	path = web
+	url = https://github.com/aprilweet/blog-web.git
